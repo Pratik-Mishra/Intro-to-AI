@@ -1,0 +1,31 @@
+Part 1
+Instead of running A* search here, is there a better algorithm that can be used to determine the solvability of
+an environment quickly? Discuss.
+
+
+
+Part 2
+Pritish claims that if two consistent heuristics h1(s) and h2(s) are available for the same problem, then at every
+state s, either h(s) = max(h1(s), h2(s)) or h(s) = min(h1(s), h2(s)) will be a consistent heuristic. Is he correct?
+Argue mathematically or provide a counter-example.
+
+
+
+Part 3
+Aravind claims that the priority of a cell can be calculated as c × f(s) − g(s), where c is a constant. For what
+values of c will this priority favor larger g-values? For what values of c will it favor lower g-values? Try to be as
+specific as possible.
+
+
+
+Part 4
+On the search problem illustrated in Fig 2, illustrate (either using ASCII printouts or any other visualization
+tool), the operation of Repeated Backward A*. The illustration must look similar to Fig 3, i.e. you must show at
+each time step:
+• the current location of the agent,
+• the agent’s knowledge about blocked and unknown cells, and
+• the trajectory (path) computed by the agent at that timestep.
+
+
+Neelesh remarks that the path found by Repeated A* is a shortest path, but not necessarily the optimal path
+from the start to the goal. Provide an example to prove him right.
