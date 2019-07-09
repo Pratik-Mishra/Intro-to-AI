@@ -29,3 +29,20 @@ each time step:
 
 Neelesh remarks that the path found by Repeated A* is a shortest path, but not necessarily the optimal path
 from the start to the goal. Provide an example to prove him right.
+
+S000000000000000
+1110111111111110
+1110111111111110
+1110000000111110
+1111111110111110
+0000000000111110
+0111111111111110
+000000000000000F
+
+S:= start
+F:= finish
+0:= unblocked
+1:= blocked
+
+Following a Euclidian heuristic, the algorithm will try to take the windier path because it initially goes closer to the finish.
+However, the optimal path would be the alternate path which goes all the way right, then straight down.
