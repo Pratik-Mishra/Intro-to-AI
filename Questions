@@ -9,7 +9,7 @@ Pritish claims that if two consistent heuristics h1(s) and h2(s) are available f
 state s, either h(s) = max(h1(s), h2(s)) or h(s) = min(h1(s), h2(s)) will be a consistent heuristic. Is he correct?
 Argue mathematically or provide a counter-example.
 
-h1 and h2 are both consistent heuristics. Therefore, either of the two will also be consistent since there are only two
+h1 and h2 are both consistent heuristics. Therefore, either of the two (max or min) will also be consistent since there are only two
 consistent heuristics to choose from.
 
 
