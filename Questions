@@ -2,6 +2,9 @@ Part 1
 Instead of running A* search here, is there a better algorithm that can be used to determine the solvability of
 an environment quickly? Discuss.
 
+No, A* search is the quickest pathfinder algorithm in terms of reaching the end goal. Dijkstra's algorithm which is the other pathfinding
+examines all the nodes from the start and then uses the node that has the lowest distance from the start. A* uses a heurstic which
+essentially determines the distances between the nodes and the finish, to figure out the most optimal path.
 
 
 Part 2
