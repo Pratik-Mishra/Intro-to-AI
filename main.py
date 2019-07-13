@@ -67,7 +67,42 @@ def EuclidHeuristic(dim, maze):
     for row in heuristic:
         print(' '.join([str(elem) for elem in row]))
     return heuristic
-    
+
+def getMin(queue):
+    min = [0, 0, 999]
+    for c in queue:
+        if c[2] < min[2]:
+            min = c
+    return min
+
+def bfs(dim, maze, heuristic):
+    mazepath = maze
+    mazepath[0][0] = 'V'
+    start = [0, 0, heuristic[0][0]]
+    path = []
+    queue = []
+    queue.append(start)
+    visited = []
+    visited.append(start)
+    while True:
+        current = getMin(queue)
+        queue.remove(current)
+        path.append(current)
+        print(path)
+        if current[0] == 9 and current[1] == 9:
+            return
+        for d in [[0, -1], [1, 0], [0, 1], [-1, 0]]:
+            neighbor = [current[0]+d[0], current[1]+d[1]]
+            if 0 <= neighbor[0] <= dim-1 and 0 <= neighbor[1] <= dim-1:
+                neighbor.append(heuristic[neighbor[1]][neighbor[0]])
+                if neighbor not in visited and maze[neighbor[1]][neighbor[0]] == 0:
+                    queue.append(neighbor)
+                    visited.append(neighbor)
+                    mazepath[neighbor[1]][neighbor[0]] = 'V'
+                    print(neighbor)
+                    for row in mazepath:
+                        print(' '.join([str(elem) for elem in row])) 
+
 maze = grid(10, 0.2)
 heuristic = EuclidHeuristic(10, maze)
 astar(maze, heuristic)
