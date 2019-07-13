@@ -77,17 +77,18 @@ def getMin(queue):
 
 def bfs(dim, maze, heuristic):
     mazepath = maze
-    mazepath[0][0] = 'V'
+    mazepath[0][0] = 'P'
     start = [0, 0, heuristic[0][0]]
     path = []
     queue = []
     queue.append(start)
     visited = []
     visited.append(start)
-    while True:
+    while queue:
         current = getMin(queue)
         queue.remove(current)
         path.append(current)
+        mazepath[current[1]][current[0]] = 'P'
         print(path)
         if current[0] == 9 and current[1] == 9:
             return
