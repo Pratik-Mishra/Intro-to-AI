@@ -1,5 +1,8 @@
 Part 1
-Instead of running A* search here, is there a better algorithm that can be used to determine the solvability of
+a) The threshold where the majority of enviornments are solvable seems to be p < .25, and p > .25 seems to have majority unsolvable.
+
+
+b) Instead of running A* search here, is there a better algorithm that can be used to determine the solvability of
 an environment quickly? Discuss.
 
 Best first search could give faster results since it does not take into consideration the distance from the path to the current node.
