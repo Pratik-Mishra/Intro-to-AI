@@ -23,7 +23,8 @@ Part 3
 Aravind claims that the priority of a cell can be calculated as c × f(s) − g(s), where c is a constant. For what
 values of c will this priority favor larger g-values? For what values of c will it favor lower g-values? Try to be as
 specific as possible.
-
+The C value will favor higher G values because the  G-value determines the length of the shortest path from the start to the other nodes,
+so in conclusion, we would emphasize the nodes closest to the start due to the fact that the start and end goals are going to be far away anyway.
 
 
 Part 4
