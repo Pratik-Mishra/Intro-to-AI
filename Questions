@@ -20,9 +20,14 @@ consistent heuristics to choose from.
 
 
 Part 3
+a) Tie-breaking with higher g-values leads to an average solve time of 75 seconds, while tie-breaking with lower values resulted
+an average time of 83 seconds. Higher g-values might be better because it picks cells whichhave traveled the most distance, and therefore
+is more likely to reach the end goal.
+
 Aravind claims that the priority of a cell can be calculated as c × f(s) − g(s), where c is a constant. For what
 values of c will this priority favor larger g-values? For what values of c will it favor lower g-values? Try to be as
 specific as possible.
+
 The C value will favor higher G values because the  G-value determines the length of the shortest path from the start to the other nodes,
 so in conclusion, we would emphasize the nodes closest to the start due to the fact that the start and end goals are going to be far away anyway.
 
@@ -39,19 +44,17 @@ each time step:
 Neelesh remarks that the path found by Repeated A* is a shortest path, but not necessarily the optimal path
 from the start to the goal. Provide an example to prove him right.
 
-S000000000000000
-1110111111111110
-1110111111111110
-1110000000111110
-1111111110111110
-0000000000111110
-0111111111111110
-000000000000000F
+S 0 0 1 0
+0 1 1 0 0
+0 0 1 0 0
+0 1 0 1 0
+0 0 0 0 G
 
-S:= start
-F:= finish
+S:= start state
+G:= goal state
 0:= unblocked
 1:= blocked
 
-Following a Euclidian heuristic, the algorithm will try to take the windier path because it initially goes closer to the finish.
-However, the optimal path would be the alternate path which goes all the way right, then straight down.
+In this scenarios, using the Manhattan heuristic, the algorithm will first try to traverse the grid going right. However, since
+that leads to a dead end, the algorithm will have to backtrack back through the start state to find a different path. Therefore,
+the path found may not be the optimal path.
