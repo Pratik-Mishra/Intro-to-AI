@@ -1,0 +1,11 @@
+1 and 2
+
+While searching and you failed to find Cell A These equations are the probabilities as followed:
+    Let type_of_cell_A = P(target not found in cell A | target in cell A)
+    
+For cell A: new_belief_in_A = (type_of_cell_A * old_belief_in_A) / (type_of_cell_A * old_belief_in_A + 1 - old_belief_in_A
+
+
+For cell B (or any other cells): scale_factor = 1 / (type_of_cell_A * old_believe_in_A + 1 - old_believe_in_A)
+
+new_belief_in_B = old_belief_in_B * scale_factor
